@@ -1,6 +1,12 @@
 /**
  * Created by mapbar_front on 2017/7/12.
  */
+
+/**
+ * @introduction
+ * 样式相关的配置，与样式无关的都不能写入里面，相当于一个全局common.css
+ */
+
 import { Platform, NativeModules, Dimensions, StatusBar } from 'react-native';
 
 const { width, height } = Dimensions.get('screen');
@@ -99,6 +105,23 @@ const style = {
     borderRightStyle:{
         borderRightWidth: 1,
         borderRightColor: '#cccccc'
+    },
+
+    btn_base:{
+        width: baseFontSize * 150,
+        height: baseFontSize * 60,
+        backgroundColor: color.mainColor,
+        borderRadius: baseFontSize * 10,
+        justifyContent:"center",
+        alignItems:'center',
+    },
+    btn_larger:{
+        width: baseFontSize * 180,
+        height: baseFontSize * 80,
+        backgroundColor: color.mainColor,
+        borderRadius: baseFontSize * 10,
+        justifyContent:"center",
+        alignItems:'center',
     }
 }
 export default {
