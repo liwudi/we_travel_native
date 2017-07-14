@@ -37,6 +37,7 @@ const style = {
     rowCenter: {
         alignItems:'center'
     },
+
     font_h1:{
         fontSize: baseFontSize * 50,
     },
@@ -49,12 +50,17 @@ const style = {
     font_base:{
         fontSize: baseFontSize * 35,
     },
-
+    /**
+     * @todo:字体颜色样式定制
+     */
     font_color_white:{
         color:'#fff'
     },
     font_color_base:{
         color:'#555555'
+    },
+    font_color_main:{
+        color:'#3c78ff'
     },
     padding:{
         padding: baseFontSize * 15,
@@ -106,7 +112,9 @@ const style = {
         borderRightWidth: 1,
         borderRightColor: '#cccccc'
     },
-
+    /**
+     * @todo:按钮不同样式的定制
+     */
     btn_base:{
         width: baseFontSize * 150,
         height: baseFontSize * 60,
@@ -122,7 +130,17 @@ const style = {
         borderRadius: baseFontSize * 10,
         justifyContent:"center",
         alignItems:'center',
-    }
+    },
+    /**
+     * @todo:添加其他的背景色
+     */
+    bgColor_white:{
+        backgroundColor:color.baseColor,
+    },
+    bgColor_main:{
+        backgroundColor:color.mainColor,
+    },
+
 }
 export default {
     screen:{
