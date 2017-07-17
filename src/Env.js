@@ -37,7 +37,18 @@ const style = {
     rowCenter: {
         alignItems:'center'
     },
-
+    /**
+     * @todo:基本高度标准制定
+     */
+    hegithBase:{
+        height: baseFontSize * 120,
+    },
+    hegithLittle:{
+        height: baseFontSize * 90,
+    },
+    /**
+     * @todo:字体大小的定制
+     */
     font_h1:{
         fontSize: baseFontSize * 50,
     },
@@ -50,17 +61,26 @@ const style = {
     font_base:{
         fontSize: baseFontSize * 35,
     },
+    font_note:{
+        fontSize: baseFontSize * 30,
+    },
     /**
      * @todo:字体颜色样式定制
      */
     font_color_white:{
         color:'#fff'
     },
+    font_color_black:{
+        color:'#000'
+    },
     font_color_base:{
         color:'#555555'
     },
     font_color_main:{
         color:'#3c78ff'
+    },
+    font_color_note:{
+        color:'#999999'
     },
     padding:{
         padding: baseFontSize * 15,
@@ -112,6 +132,7 @@ const style = {
         borderRightWidth: 1,
         borderRightColor: '#cccccc'
     },
+
     /**
      * @todo:按钮不同样式的定制
      */

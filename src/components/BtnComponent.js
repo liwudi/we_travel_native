@@ -10,13 +10,13 @@ import {
 import Env from '../Env';
 const estyle = Env.style;
 
-export default class Btn extends Component{
+export default class BtnComponent extends Component{
     render(){
         return (
             <TouchableOpacity onPress={()=>{
                 this.props.OnClick && this.props.OnClick();
-            }} style={[estyle.btn_base]}>
-                <Text style={[estyle.font_h2,estyle.font_color_white]}>登录</Text>
+            }} style={[estyle.btn_base,this.props.style]}>
+                <Text style={[estyle.font_h2,estyle.font_color_white]}>{this.props.title?this.props.title:'登录'}</Text>
             </TouchableOpacity>
         )
     }

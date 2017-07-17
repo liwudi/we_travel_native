@@ -17,10 +17,14 @@ import SetPageScreen from './pages/setPage/SetPageScreen';
 import ChatPageScreen from './pages/chatpage/ChatPageScreen';
 
 import LoginScreen from './pages/login/LoginScreen';
-import RegisterScreen from './pages/register/RegisterScreen'
+import OtherLoginScreen from './pages/login/OtherLoginScreen';
+import RegisterScreen from './pages/register/RegisterScreen';
 
+
+import Env from './Env';
+const estyle = Env.style;
 //这是路由配置
-var App = StackNavigator({
+var Apps = StackNavigator({
     Home: {
         screen:HomeScreen
     },
@@ -49,23 +53,55 @@ const MyApp = TabNavigator({
     Login:{
         screen:LoginScreen
    },
-    Register:{
-        screen:RegisterScreen
+    OtherLogin:{
+        screen:OtherLoginScreen
     }
 },{
-    title:"图吧同行",
-    headerTintColor: '#fff',
-    headerStyle:{
-        backgroundColor: '#3c78ff',
-    },
+    tabBarOptions:{
+
+        inactiveTintColor: '#000',
+        activeTintColor: Env.color.mainColor,
+        style:{
+            backgroundColor:"#fff",
+        },
+        labelStyle:{
+            fontSize: Env.screen.baseFontSize * 30
+        }
+    }
 });
 /**
  * @todo,目前这个没搞明白，测试中
  */
-const App = StackNavigator({
-    Home:{screen:MyApp},
-    Chat:{screen:HomeScreen}
+var App = StackNavigator({
+    Login:{screen:MyApp},
+    Register:{screen:RegisterScreen},
+    Home: {
+        screen:HomeScreen
+    },
+    Search: {
+        screen:SearchScreen
+    },
+    SearchResult:{
+        screen:SearchResultScreen
+    },
+    WatchMap:{
+        screen:WatchMapScreen
+    },
+    Destination:{
+        screen:DestinationScreen
+    },
+    SetPage:{
+        screen:SetPageScreen
+    },
+    ChatPage:{
+        screen:ChatPageScreen
+    }
+},{
+    headerStyle:{
+        height:0
+    },
 });
+
 /**
  * @todo:还需要嵌入redux的使用，用来管理用户数据
  * @todo:需要检查所有的js文件的类名
